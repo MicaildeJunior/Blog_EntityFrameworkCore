@@ -14,7 +14,6 @@ namespace Blog.Data
         //public DbSet<UserRole> UserRoles{ get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlServer("Data Source=LAPTOP-563RGJKO\\SQLEXPRESS;Initial Catalog=blog-modulo-6; Integrated Security=True");
-            //=> options.UseSqlServer("Server = LAPTOP-563RGJKO\\SQLEXPRESS; Database=blog-modulo-6;User Id = sa; Password=@Sql2019;");
+            => options.UseSqlServer("Data Source=LAPTOP-563RGJKO\\SQLEXPRESS;Initial Catalog=Curso_EF_Balta; Integrated Security=True");            
     }
 }

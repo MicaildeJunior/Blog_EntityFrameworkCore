@@ -67,8 +67,7 @@ namespace Blog_EntityFrameworkCore.Data.Mappings
                         .WithMany()
                         .HasForeignKey("TagId")
                         .HasConstraintName("FK_PostTag_TagId")
-                        .OnDelete(DeleteBehavior.Cascade));
-                .
+                        .OnDelete(DeleteBehavior.Cascade));                
         }
     }
 }

@@ -1,4 +1,7 @@
 ﻿using Blog.Data;
+using Blog.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Linq;
 
 namespace Blog
@@ -11,22 +14,44 @@ namespace Blog
             {
                 // Criando um obj
 
-                /*var tag = new Tag { Name = "Asp.Net", Slug = "aspnet" };
-                context.Tags.Add(tag);
-                context.SaveChanges();*/
+                //var tag = new Tag { Name = "Asp.Net", Slug = "aspnet" };
+                //context.Tags.Add(tag);
+                //context.SaveChanges();
 
                 // Mudando o nome e Slug pelo Id
-                // var tag = context.Tags.FirstOrDefault(x => x.Id == 1);
-                // tag.Name = "ASP.Net";
-                // tag.Slug = "aspnet";
+
+                //var tag = context.Tags.FirstOrDefault(x => x.Id == 1);
+                //tag.Name = "ASP.Net";
+                //tag.Slug = "aspnet";
 
                 // context.Update(tag);
                 // context.SaveChanges();
 
-                // var tag = context.Tags.FirstOrDefault(x => x.Id == 1);
+                // Crtl + K + C comenta várias linhas, Crtl + K + U descomenta
 
-                // context.Remove(tag);
-                // context.SaveChanges();
+                //var tag = context.tags.firstordefault(x => x.id == 1);
+
+                //context.remove(tag);
+                //context.savechanges();
+
+                //var tags = context.Tags
+                //    .AsNoTracking() // Somente em leitura, Update e Delete não usar
+                //    .ToList();
+
+                //foreach(var tag in tags)
+                //{
+                //    Console.WriteLine(tag.Name );
+                //}
+
+                //var tag = context
+                //    .Tags
+                //    .AsNoTracking()
+                //    .FirstOrDefault(x => x.Id == 1);
+                    
+                //Console.WriteLine(tag?.Name);
+
+
+
             }
         }
     }

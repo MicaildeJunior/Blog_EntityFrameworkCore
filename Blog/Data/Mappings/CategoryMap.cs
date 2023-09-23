@@ -11,13 +11,13 @@ namespace Blog_EntityFrameworkCore.Data.Mappings
             // Tabela
             builder.ToTable("Category");
             
-            // Chave Primária
+            // Chave Primária, HasKey indica que é chave primária
             builder.HasKey(x => x.Id); 
 
             // Identity
             builder.Property(x => x.Id)
                 .ValueGeneratedOnAdd()
-                .UseIdentityColumn();
+                .UseIdentityColumn(); // PRIMARY KEY IDENTITY(1, 1)
 
             // Propriedades
             builder.Property(x => x.Name)
@@ -29,7 +29,7 @@ namespace Blog_EntityFrameworkCore.Data.Mappings
             builder.Property(x => x.Slug)
                 .IsRequired()
                 .HasColumnName("Slug")
-                .HasColumnType("NVARCHAR")
+                .HasColumnType("VARCHAR")
                 .HasMaxLength(80);
 
             // Índices

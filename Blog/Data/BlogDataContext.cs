@@ -1,4 +1,5 @@
 ﻿using Blog.Models;
+using Blog_EntityFrameworkCore.Data.Mappings;
 using Microsoft.EntityFrameworkCore;
 
 namespace Blog.Data
@@ -14,6 +15,14 @@ namespace Blog.Data
         //public DbSet<UserRole> UserRoles{ get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlServer("Data Source=LAPTOP-563RGJKO\\SQLEXPRESS;Initial Catalog=Curso_EF_Balta; Integrated Security=True");            
+            => options.UseSqlServer("Data Source=LAPTOP-563RGJKO\\SQLEXPRESS;Initial Catalog=Curso_EF_Balta; Integrated Security=True");
+
+        // Configuração dos Mapeamentos
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new CategoryMap());
+            modelBuilder.ApplyConfiguration(new  PostMap());
+            modelBuilder.ApplyConfiguration(new UserMap());
+        }
     }
 }

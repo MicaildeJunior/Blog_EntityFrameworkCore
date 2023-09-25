@@ -1,11 +1,7 @@
 ﻿using Blog.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Blog_EntityFrameworkCore.Data.Mappings
 {
@@ -37,7 +33,7 @@ namespace Blog_EntityFrameworkCore.Data.Mappings
                 .HasIndex(x => x.Slug, "IX_Post_Slug")
                 .IsUnique();
 
-            // Relacionamentos
+            // Relacionamentos // Has é Possuir
             builder
                .HasOne(x => x.Author)
                .WithMany(x => x.Posts)
@@ -60,7 +56,7 @@ namespace Blog_EntityFrameworkCore.Data.Mappings
                         .HasOne<Tag>()
                         .WithMany()
                         .HasForeignKey("PostId")
-                        .HasConstraintName("FK_PostRole_PostId")
+                        .HasConstraintName("FK_PostTag_PostId")
                         .OnDelete(DeleteBehavior.Cascade),
                     tag => tag
                         .HasOne<Post>()

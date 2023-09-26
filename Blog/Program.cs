@@ -47,11 +47,41 @@ namespace Blog
                 //    .Tags
                 //    .AsNoTracking()
                 //    .FirstOrDefault(x => x.Id == 1);
-                    
+
                 //Console.WriteLine(tag?.Name);
 
+                // Adiciona um Usuário no Banco
+                //context.Users.Add(new User
+                //{
+                //    Bio = "Analista Júnior",
+                //    Email = "mica@jr.io",
+                //    Image = "https://www.linkedin.com/in/micaildejr/",
+                //    Name = "Micailde Júnior",
+                //    PasswordHash = "1234",
+                //    Slug = "mica-jr"
+                //});
+                //context.SaveChanges();
 
-
+                // Alterando os dados do Usuário
+                //var user = context.Users.FirstOrDefault();
+                //var post = new Post
+                //{
+                //    Author = user,
+                //    Body = "Meu artigo",
+                //    Category = new Category
+                //    {
+                //        Name = "Teste1",
+                //        Slug = "teste1"
+                //    },
+                //    CreateDate = DateTime.Now,
+                //    // LastUpdateDate=
+                //    Slug = "meu-artigo",
+                //    Summary = "Neste artigo vamos conferir...",
+                //    // Tags = null,
+                //    Title = "Meu artigo"
+                //};
+                //context.Posts.Add(post);
+                //context.SaveChanges();
             }
         }
     }

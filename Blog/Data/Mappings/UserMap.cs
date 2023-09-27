@@ -1,11 +1,7 @@
 ﻿using Blog.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Blog_EntityFrameworkCore.Data.Mappings
 {
@@ -35,6 +31,7 @@ namespace Blog_EntityFrameworkCore.Data.Mappings
             builder.Property(x => x.Bio);
             builder.Property(x => x.Image);
             builder.Property(x => x.PasswordHash);
+            builder.Property(x => x.GitHub);
 
             builder.Property(x => x.Slug)
                .IsRequired()

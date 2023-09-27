@@ -1,8 +1,5 @@
 ﻿using Blog.Data;
 using Blog.Models;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Linq;
 
 namespace Blog
 {
@@ -81,6 +78,20 @@ namespace Blog
                 //    Title = "Meu artigo"
                 //};
                 //context.Posts.Add(post);
+                //context.SaveChanges();
+
+                //var user = new User
+                //{
+                //    Name = "Grogu",
+                //    Email = "grogu@gmail.com",
+                //    GitHub = "grogu",
+                //    Bio = "Morning Star",
+                //    Image = "https://",
+                //    PasswordHash = "1234",
+                //    Slug = "grogu"
+                //};
+
+                //context.Users.Add(user);
                 //context.SaveChanges();
             }
         }
